@@ -1,0 +1,14 @@
+<!--components/navigation.wxml-->
+<view style="height:{{titleBarHeight}}px;padding-top:{{statusBarHeight}}px">
+  <view class="header" style="height:{{titleBarHeight}}px;padding-top:{{statusBarHeight}}px">
+    <view class="iconGroup" wx:if="{{showIcon}}">
+      <view class="back" bindtap="headerBack"><image src="./img/left.png"></image></view>
+      <view class="divider"></view>
+      <view class="home" bindtap="backHome"><image src="./img/home.png"></image></view>
+    </view>
+    <view class="titleContent" wx:if="{{showTitle}}">{{title}}</view>
+    <view class="cateSearch" wx:if="{{showSearch}}" bindtap='toSearch'>
+      <image src="./img/search.png"></image><text>输入搜索内容</text>
+    </view>
+  </view>
+</view>
